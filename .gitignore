@@ -1,0 +1,5 @@
+MCPDocSearch/.venv/
+MCPDocSearch/storage/document_chunks_cache.pkl
+__pycache__/
+*.pyc
+.DS_Store
