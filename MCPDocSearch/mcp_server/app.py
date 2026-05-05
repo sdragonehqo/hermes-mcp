@@ -1,5 +1,4 @@
-import torch  # Import torch to check for GPU
-import mcp.types as types
+import torch
 from fastmcp import FastMCP
 from sentence_transformers import SentenceTransformer
 
@@ -47,15 +46,7 @@ except Exception as e:
 # --- MCP Server Instance ---
 # Initialize FastMCP server instance in a central place
 # Document loading will happen in main.py when run directly
-mcp_server = FastMCP(
-    name="doc-query-server",
-    version="0.1.0",
-    # Define server capabilities - we only offer tools here
-    capabilities=types.ServerCapabilities(
-        # Instantiate ToolsCapability directly (corrected name)
-        tools=types.ToolsCapability(listChanged=False)
-    ),
-)
+mcp_server = FastMCP(name="doc-query-server")
 
 # Tools are imported when mcp_tools.py is loaded, which happens implicitly
 # when main.py imports this module or mcp_tools directly.
