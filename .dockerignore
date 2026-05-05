@@ -1,0 +1,11 @@
+.git
+.venv
+MCPDocSearch/.venv
+MCPDocSearch/storage/document_chunks_cache.pkl
+MCPDocSearch/crawler_cli
+MCPDocSearch/crawl.py
+MCPDocSearch/uv.lock
+*.pyc
+__pycache__
+.DS_Store
+*.egg-info

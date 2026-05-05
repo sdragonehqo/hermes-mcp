@@ -15,7 +15,27 @@ hermes-mcp/
     └── ...
 ```
 
-## Quick Start
+## Quick Start (Hosted — recommended)
+
+The server runs on Railway. No local install needed.
+
+Add to `~/.claude/settings.json` (global) or your project's `.claude/settings.json`:
+
+```json
+{
+  "mcpServers": {
+    "hermes-docs": {
+      "url": "https://hermes-mcp-production.up.railway.app/sse"
+    }
+  }
+}
+```
+
+Restart Claude Code and you're done.
+
+> **Note:** Replace the URL above with your actual Railway deployment URL once deployed.
+
+## Quick Start (Local)
 
 ### 1. Run setup
 
