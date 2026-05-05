@@ -21,8 +21,8 @@ COPY MCPDocSearch/storage/ ./storage/
 RUN python -c "from mcp_server.data_loader import load_and_chunk_documents; load_and_chunk_documents()"
 
 ENV MCP_TRANSPORT=sse
-ENV FASTMCP_SERVER_HOST=0.0.0.0
+ENV FASTMCP_HOST=0.0.0.0
 EXPOSE 8000
 
 # Railway sets PORT at runtime; map it to FastMCP's setting
-CMD ["sh", "-c", "FASTMCP_SERVER_PORT=${PORT:-8000} python -m mcp_server.main"]
+CMD ["sh", "-c", "FASTMCP_PORT=${PORT:-8000} python -m mcp_server.main"]
