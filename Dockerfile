@@ -24,4 +24,4 @@ ENV MCP_TRANSPORT=sse
 EXPOSE 8000
 
 # Railway sets PORT at runtime; map it to FastMCP's setting
-CMD ["sh", "-c", "FASTMCP_SERVER_PORT=${PORT:-8000} python -m mcp_server.main"]
+CMD ["sh", "-c", "FASTMCP_SERVER_HOST=0.0.0.0 FASTMCP_SERVER_PORT=${PORT:-8000} python -m mcp_server.main"]
